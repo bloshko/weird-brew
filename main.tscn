@@ -32,16 +32,16 @@
 [sub_resource type="SpriteFrames" id="SpriteFrames_0n3wm"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.2,
 "texture": ExtResource("4_1u8w0")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": ExtResource("5_0odxb")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": ExtResource("6_lswn8")
 }, {
-"duration": 1.0,
+"duration": 0.2,
 "texture": ExtResource("7_a6jrf")
 }, {
 "duration": 1.0,
@@ -126,7 +126,7 @@ texture = SubResource("NoiseTexture2D_ig7tw")
 position = Vector2(484, 229)
 scale = Vector2(0.6499007, 0.6499007)
 sprite_frames = SubResource("SpriteFrames_0n3wm")
-frame_progress = 0.33052644
+frame_progress = 0.54752904
 speed_scale = 0.2
 
 [node name="FindTheDifference" type="Control" parent="."]

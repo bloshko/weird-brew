@@ -1,24 +1,19 @@
-[gd_scene load_steps=10 format=3 uid="uid://d1n4mrvpoddce"]
+[gd_scene load_steps=9 format=3 uid="uid://d1n4mrvpoddce"]
 
 [ext_resource type="Script" uid="uid://dwka8hvmmfnpg" path="res://prototype_mouse_movement.gd" id="1_sl2gp"]
 [ext_resource type="Texture2D" uid="uid://dmi2du444iub4" path="res://assets/bg1.png" id="2_h50ol"]
 [ext_resource type="Texture2D" uid="uid://cdmcna4qbmqf2" path="res://assets/hand_right.png" id="2_jgy6h"]
-
-[sub_resource type="QuadMesh" id="QuadMesh_jgy6h"]
-
-[sub_resource type="Gradient" id="Gradient_h50ol"]
-offsets = PackedFloat32Array(0.99666667, 1)
-colors = PackedColorArray(0.98137265, 0.91729635, 0.9852937, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_d2xlq"]
-gradient = SubResource("Gradient_h50ol")
+[ext_resource type="Texture2D" uid="uid://ddmrmko4xi7t0" path="res://assets/circle_empty.png" id="3_d2xlq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2gp"]
-size = Vector2(1.0000025, 1.0000001)
+size = Vector2(69.99994, 69)
 
 [sub_resource type="QuadMesh" id="QuadMesh_pwf5s"]
 
 [sub_resource type="ImageTexture" id="ImageTexture_74uov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xlq"]
+size = Vector2(1.5164642, 1.562959)
 
 [node name="PrototypeMouseMovement" type="Node2D"]
 script = ExtResource("1_sl2gp")
@@ -39,11 +34,10 @@ texture = ExtResource("2_h50ol")
 
 [node name="Map" type="Node2D" parent="."]
 
-[node name="MapNode1" type="MeshInstance2D" parent="Map"]
+[node name="MapNode1" type="Sprite2D" parent="Map"]
 position = Vector2(1483.7615, 380.76147)
-scale = Vector2(39.522976, 39.522976)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode1"]
 
@@ -51,11 +45,10 @@ texture = SubResource("GradientTexture1D_d2xlq")
 position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
-[node name="MapNode2" type="MeshInstance2D" parent="Map"]
+[node name="MapNode2" type="Sprite2D" parent="Map"]
 position = Vector2(1761.7615, 421.76147)
-scale = Vector2(39.522972, 39.522972)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode2"]
 
@@ -63,11 +56,10 @@ texture = SubResource("GradientTexture1D_d2xlq")
 position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
-[node name="MapNode3" type="MeshInstance2D" parent="Map"]
+[node name="MapNode3" type="Sprite2D" parent="Map"]
 position = Vector2(1915, 544)
-scale = Vector2(39.522976, 39.522976)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode3"]
 
@@ -75,11 +67,10 @@ texture = SubResource("GradientTexture1D_d2xlq")
 position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
-[node name="MapNode4" type="MeshInstance2D" parent="Map"]
+[node name="MapNode4" type="Sprite2D" parent="Map"]
 position = Vector2(2041, 398.00003)
-scale = Vector2(39.522976, 39.522976)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode4"]
 
@@ -87,28 +78,25 @@ texture = SubResource("GradientTexture1D_d2xlq")
 position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
-[node name="MapNode5" type="MeshInstance2D" parent="Map"]
+[node name="MapNode5" type="Sprite2D" parent="Map"]
 position = Vector2(1751.7615, 271.76147)
-scale = Vector2(39.522976, 39.522976)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode5"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode5/Area2D"]
-position = Vector2(0, -2.3841858e-07)
+position = Vector2(-0.7614746, -1.2614746)
 shape = SubResource("RectangleShape2D_sl2gp")
 
-[node name="MapNode6" type="MeshInstance2D" parent="Map"]
+[node name="MapNode6" type="Sprite2D" parent="Map"]
 position = Vector2(1613.7615, 524.7615)
-scale = Vector2(39.522972, 39.522972)
-mesh = SubResource("QuadMesh_jgy6h")
-texture = SubResource("GradientTexture1D_d2xlq")
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("3_d2xlq")
 
 [node name="Area2D" type="Area2D" parent="Map/MapNode6"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode6/Area2D"]
-position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNodeNodeTouchedTimer" type="Timer" parent="Map"]
@@ -130,5 +118,6 @@ scale = Vector2(0.037171256, 0.037171256)
 texture = ExtResource("2_jgy6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lozka/Area2D"]
-position = Vector2(0, -2.3841858e-07)
-shape = SubResource("RectangleShape2D_sl2gp")
+position = Vector2(0.007315159, -0.25243643)
+scale = Vector2(1.0000006, 1.0000006)
+shape = SubResource("RectangleShape2D_d2xlq")
