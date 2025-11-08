@@ -1,0 +1,112 @@
+[gd_scene load_steps=8 format=3 uid="uid://d1n4mrvpoddce"]
+
+[ext_resource type="Script" uid="uid://dwka8hvmmfnpg" path="res://prototype_mouse_movement.gd" id="1_sl2gp"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_jgy6h"]
+
+[sub_resource type="Gradient" id="Gradient_h50ol"]
+offsets = PackedFloat32Array(0.99666667, 1)
+colors = PackedColorArray(0.98137265, 0.91729635, 0.9852937, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_d2xlq"]
+gradient = SubResource("Gradient_h50ol")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2gp"]
+size = Vector2(1.0000025, 1.0000001)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pwf5s"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_74uov"]
+
+[node name="PrototypeMouseMovement" type="Node2D"]
+script = ExtResource("1_sl2gp")
+
+[node name="Map" type="Node2D" parent="."]
+
+[node name="MapNode1" type="MeshInstance2D" parent="Map"]
+position = Vector2(303.00003, 71.00001)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode1/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode2" type="MeshInstance2D" parent="Map"]
+position = Vector2(241.00003, 348)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode2/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode3" type="MeshInstance2D" parent="Map"]
+position = Vector2(516.00006, 525)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode3/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode4" type="MeshInstance2D" parent="Map"]
+position = Vector2(779, 360)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode4/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode5" type="MeshInstance2D" parent="Map"]
+position = Vector2(706.00006, 60.000008)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode5/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode6" type="MeshInstance2D" parent="Map"]
+position = Vector2(519.00006, 273)
+scale = Vector2(30, 30)
+mesh = SubResource("QuadMesh_jgy6h")
+texture = SubResource("GradientTexture1D_d2xlq")
+
+[node name="Area2D" type="Area2D" parent="Map/MapNode6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Map/MapNode6/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNodeNodeTouchedTimer" type="Timer" parent="Map"]
+wait_time = 2.0
+
+[node name="Lozka" type="MeshInstance2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(448, 256)
+scale = Vector2(67.99994, 67.99994)
+mesh = SubResource("QuadMesh_pwf5s")
+texture = SubResource("ImageTexture_74uov")
+
+[node name="Area2D" type="Area2D" parent="Lozka"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Lozka/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
