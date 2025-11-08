@@ -1,26 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://bnf0b8wmr38qb"]
+[gd_scene load_steps=6 format=3 uid="uid://ba0wfdxpewfpl"]
 
-[ext_resource type="Script" uid="uid://dq173kyf355g1" path="res://prototype_left_hand_movements.gd" id="1_f3s46"]
+[ext_resource type="Script" path="res://prototype_left_hand_movements.gd" id="1_f3s46"]
+[ext_resource type="Texture2D" uid="uid://ct3ivf6iwex5j" path="res://assets/hand_left.png" id="2_u4iia"]
+[ext_resource type="Texture2D" uid="uid://bwoomyx3b4nvm" path="res://assets/hand_left_hold.png" id="3_pd4h1"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_ywuup"]
 
-[sub_resource type="Gradient" id="Gradient_f3s46"]
-offsets = PackedFloat32Array(1)
-colors = PackedColorArray(0, 0, 0, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_u4iia"]
-gradient = SubResource("Gradient_f3s46")
-
-[sub_resource type="Gradient" id="Gradient_u4iia"]
-offsets = PackedFloat32Array(0.85333335, 1)
-colors = PackedColorArray(1, 0, 0, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_pd4h1"]
-gradient = SubResource("Gradient_u4iia")
-fill_from = Vector2(0.9766355, 0)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3s46"]
-radius = 50.0
+radius = 93.193344
 
 [node name="PrototypeLeftHandMovements" type="Node2D"]
 script = ExtResource("1_f3s46")
@@ -28,20 +15,23 @@ script = ExtResource("1_f3s46")
 [node name="LeftHand" type="Node2D" parent="."]
 
 [node name="OpenHand" type="MeshInstance2D" parent="LeftHand"]
-position = Vector2(345, 318)
-scale = Vector2(100, 100)
+position = Vector2(503.29413, 1092.5706)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58798)
 mesh = SubResource("QuadMesh_ywuup")
-texture = SubResource("GradientTexture1D_u4iia")
+texture = ExtResource("2_u4iia")
 
 [node name="ClosedHand" type="MeshInstance2D" parent="LeftHand"]
 visible = false
-position = Vector2(345, 318)
-scale = Vector2(100, 100)
+position = Vector2(502.2941, 1090.5706)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58817)
 mesh = SubResource("QuadMesh_ywuup")
-texture = SubResource("GradientTexture2D_pd4h1")
+texture = ExtResource("3_pd4h1")
 
 [node name="AreaToPickUpThings" type="Area2D" parent="LeftHand"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftHand/AreaToPickUpThings"]
-position = Vector2(345, 318)
+position = Vector2(516.9643, 501.99997)
+scale = Vector2(1.4982585, 1.4982585)
 shape = SubResource("CircleShape2D_f3s46")
