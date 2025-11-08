@@ -1,8 +1,6 @@
-[gd_scene load_steps=28 format=3 uid="uid://dkm812ayphilu"]
+[gd_scene load_steps=40 format=3 uid="uid://dkm812ayphilu"]
 
 [ext_resource type="Texture2D" uid="uid://dmi2du444iub4" path="res://assets/bg1.png" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://d1n4mrvpoddce" path="res://prototype_mouse_movement.tscn" id="2_h2yge"]
-[ext_resource type="PackedScene" uid="uid://ba0wfdxpewfpl" path="res://prototype_left_hand_movements.tscn" id="3_h2yge"]
 [ext_resource type="Texture2D" uid="uid://c54hpcrgxa3d8" path="res://assets/hourglass/glsass0.png" id="4_1u8w0"]
 [ext_resource type="Texture2D" uid="uid://capbq4ppkx6c6" path="res://assets/hourglass/glsass1.png" id="5_0odxb"]
 [ext_resource type="Texture2D" uid="uid://rnxj38vr68t7" path="res://assets/hourglass/glsass2.png" id="6_lswn8"]
@@ -23,7 +21,15 @@
 [ext_resource type="Texture2D" uid="uid://v15robtcvhxv" path="res://assets/hourglass/glsass17.png" id="21_4lmeg"]
 [ext_resource type="Texture2D" uid="uid://duhl65gqkj3h0" path="res://assets/hourglass/glsass18.png" id="22_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://sw5md3hjbjpq" path="res://assets/hourglass/glsass19.png" id="23_d2t1y"]
+[ext_resource type="Script" uid="uid://dwka8hvmmfnpg" path="res://prototype_mouse_movement.gd" id="23_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://bogbup3bkenbr" path="res://assets/hourglass/glsass20.png" id="24_gngh3"]
+[ext_resource type="Texture2D" uid="uid://ddmrmko4xi7t0" path="res://assets/circle_empty.png" id="24_kq58d"]
+[ext_resource type="Texture2D" uid="uid://cdmcna4qbmqf2" path="res://assets/hand_right.png" id="25_seu75"]
+[ext_resource type="Script" uid="uid://dq173kyf355g1" path="res://prototype_left_hand_movements.gd" id="26_htxhm"]
+[ext_resource type="Script" uid="uid://x8ro4wm5lkkb" path="res://table.gd" id="27_jq2sk"]
+[ext_resource type="Texture2D" uid="uid://ct3ivf6iwex5j" path="res://assets/hand_left.png" id="28_4k2k6"]
+[ext_resource type="Texture2D" uid="uid://bwoomyx3b4nvm" path="res://assets/hand_left_hold.png" id="29_0rl1p"]
+[ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
 
 [sub_resource type="PlaceholderMesh" id="PlaceholderMesh_7dm0k"]
 
@@ -100,6 +106,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2gp"]
+size = Vector2(69.99994, 69)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pwf5s"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_74uov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xlq"]
+size = Vector2(1.5164642, 1.562959)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ywuup"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f3s46"]
+radius = 93.193344
+
 [node name="Node2D" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -108,7 +129,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="background" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -129,43 +150,135 @@ sprite_frames = SubResource("SpriteFrames_0n3wm")
 frame_progress = 0.54752904
 speed_scale = 0.2
 
-[node name="FindTheDifference" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 16.0
-offset_top = 23.0
-offset_right = 56.0
-offset_bottom = 63.0
+[node name="PrototypeMouseMovement" type="Node2D" parent="."]
+script = ExtResource("23_qsp4k")
 
-[node name="ColorRect" type="ColorRect" parent="FindTheDifference"]
+[node name="Map" type="Node2D" parent="PrototypeMouseMovement"]
+
+[node name="MapNode1" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1505, 383)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode1/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode2" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1760.0001, 360.00003)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode2/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode3" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1944, 508)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode3/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode4" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1994.0001, 305.00003)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode4/Area2D"]
+position = Vector2(0, -2.3841858e-07)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode5" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1696, 195.00002)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode5/Area2D"]
+position = Vector2(-0.7614746, -1.2614746)
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNode6" type="Sprite2D" parent="PrototypeMouseMovement/Map"]
+position = Vector2(1615.0001, 526.00006)
+scale = Vector2(0.6490178, 0.6490178)
+texture = ExtResource("24_kq58d")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Map/MapNode6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Map/MapNode6/Area2D"]
+shape = SubResource("RectangleShape2D_sl2gp")
+
+[node name="MapNodeNodeTouchedTimer" type="Timer" parent="PrototypeMouseMovement/Map"]
+wait_time = 2.0
+
+[node name="Lozka" type="MeshInstance2D" parent="PrototypeMouseMovement"]
+unique_name_in_owner = true
+position = Vector2(1311.7693, 578.9614)
+scale = Vector2(31.538282, 31.538282)
+mesh = SubResource("QuadMesh_pwf5s")
+texture = SubResource("ImageTexture_74uov")
+
+[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Lozka"]
+
+[node name="Sprite2D" type="Sprite2D" parent="PrototypeMouseMovement/Lozka/Area2D"]
+position = Vector2(1.8780568, 16.74278)
+rotation = -1.562324
+scale = Vector2(0.037171256, 0.037171256)
+texture = ExtResource("25_seu75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Lozka/Area2D"]
+position = Vector2(0.007315159, -0.25243643)
+scale = Vector2(1.0000006, 1.0000006)
+shape = SubResource("RectangleShape2D_d2xlq")
+
+[node name="PrototypeLeftHandMovements" type="Node2D" parent="."]
+script = ExtResource("26_htxhm")
+
+[node name="LeftHand" type="Node2D" parent="PrototypeLeftHandMovements"]
+
+[node name="OpenHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
+position = Vector2(503.29413, 1092.5706)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58798)
+mesh = SubResource("QuadMesh_ywuup")
+texture = ExtResource("28_4k2k6")
+
+[node name="ClosedHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
 visible = false
-layout_mode = 0
-offset_right = 531.46826
-offset_bottom = 442.0
+position = Vector2(502.2941, 1090.5706)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58817)
+mesh = SubResource("QuadMesh_ywuup")
+texture = ExtResource("29_0rl1p")
 
-[node name="ItemA" type="Control" parent="FindTheDifference"]
-anchors_preset = 0
-offset_left = 131.0
-offset_top = 186.0
-offset_right = 171.0
-offset_bottom = 226.0
+[node name="AreaToPickUpThings" type="Area2D" parent="PrototypeLeftHandMovements/LeftHand"]
 
-[node name="ItemB" type="Control" parent="FindTheDifference"]
-anchors_preset = 0
-offset_left = 330.0
-offset_top = 187.0
-offset_right = 370.0
-offset_bottom = 227.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeLeftHandMovements/LeftHand/AreaToPickUpThings"]
+position = Vector2(516.9643, 501.99997)
+scale = Vector2(1.4982585, 1.4982585)
+shape = SubResource("CircleShape2D_f3s46")
 
-[node name="DifferenceTimer" type="Timer" parent="FindTheDifference"]
+[node name="Table" type="Node2D" parent="PrototypeLeftHandMovements"]
+unique_name_in_owner = true
+script = ExtResource("27_jq2sk")
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-layout_mode = 0
-offset_left = 637.0
-offset_top = 35.0
-offset_right = 1097.5256
-offset_bottom = 418.0
+[node name="LeftItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(425, 943)
 
-[node name="PrototypeMouseMovement" parent="." instance=ExtResource("2_h2yge")]
+[node name="RightItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(923, 909)
 
-[node name="PrototypeLeftHandMovements" parent="." instance=ExtResource("3_h2yge")]
+[node name="GameLogic" type="Node" parent="."]
+script = ExtResource("30_kq58d")
