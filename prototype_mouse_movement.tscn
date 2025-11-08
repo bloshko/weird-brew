@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://d1n4mrvpoddce"]
+[gd_scene load_steps=10 format=3 uid="uid://d1n4mrvpoddce"]
 
 [ext_resource type="Script" uid="uid://dwka8hvmmfnpg" path="res://prototype_mouse_movement.gd" id="1_sl2gp"]
+[ext_resource type="Texture2D" uid="uid://dmi2du444iub4" path="res://assets/bg1.png" id="2_h50ol"]
+[ext_resource type="Texture2D" uid="uid://cdmcna4qbmqf2" path="res://assets/hand_right.png" id="2_jgy6h"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_jgy6h"]
 
@@ -21,11 +23,25 @@ size = Vector2(1.0000025, 1.0000001)
 [node name="PrototypeMouseMovement" type="Node2D"]
 script = ExtResource("1_sl2gp")
 
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -3.0
+offset_top = -1.0
+offset_right = 1917.0
+offset_bottom = 1079.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.2025304, 1.2025304)
+texture = ExtResource("2_h50ol")
+
 [node name="Map" type="Node2D" parent="."]
 
 [node name="MapNode1" type="MeshInstance2D" parent="Map"]
-position = Vector2(303.00003, 71.00001)
-scale = Vector2(30, 30)
+position = Vector2(1483.7615, 380.76147)
+scale = Vector2(39.522976, 39.522976)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -36,8 +52,8 @@ position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNode2" type="MeshInstance2D" parent="Map"]
-position = Vector2(241.00003, 348)
-scale = Vector2(30, 30)
+position = Vector2(1761.7615, 421.76147)
+scale = Vector2(39.522972, 39.522972)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -48,8 +64,8 @@ position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNode3" type="MeshInstance2D" parent="Map"]
-position = Vector2(516.00006, 525)
-scale = Vector2(30, 30)
+position = Vector2(1915, 544)
+scale = Vector2(39.522976, 39.522976)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -60,8 +76,8 @@ position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNode4" type="MeshInstance2D" parent="Map"]
-position = Vector2(779, 360)
-scale = Vector2(30, 30)
+position = Vector2(2041, 398.00003)
+scale = Vector2(39.522976, 39.522976)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -72,8 +88,8 @@ position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNode5" type="MeshInstance2D" parent="Map"]
-position = Vector2(706.00006, 60.000008)
-scale = Vector2(30, 30)
+position = Vector2(1751.7615, 271.76147)
+scale = Vector2(39.522976, 39.522976)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -84,8 +100,8 @@ position = Vector2(0, -2.3841858e-07)
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNode6" type="MeshInstance2D" parent="Map"]
-position = Vector2(519.00006, 273)
-scale = Vector2(30, 30)
+position = Vector2(1613.7615, 524.7615)
+scale = Vector2(39.522972, 39.522972)
 mesh = SubResource("QuadMesh_jgy6h")
 texture = SubResource("GradientTexture1D_d2xlq")
 
@@ -100,12 +116,18 @@ wait_time = 2.0
 
 [node name="Lozka" type="MeshInstance2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(448, 256)
-scale = Vector2(67.99994, 67.99994)
+position = Vector2(1311.7693, 578.9614)
+scale = Vector2(31.538282, 31.538282)
 mesh = SubResource("QuadMesh_pwf5s")
 texture = SubResource("ImageTexture_74uov")
 
 [node name="Area2D" type="Area2D" parent="Lozka"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Lozka/Area2D"]
+position = Vector2(1.8780568, 16.74278)
+rotation = -1.562324
+scale = Vector2(0.037171256, 0.037171256)
+texture = ExtResource("2_jgy6h")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Lozka/Area2D"]
 position = Vector2(0, -2.3841858e-07)
