@@ -829,7 +829,7 @@ position = Vector2(1755.0001, 409)
 scale = Vector2(1.186, 1.186)
 sprite_frames = SubResource("SpriteFrames_fwsus")
 animation = &"water_boil"
-frame_progress = 0.8784717
+frame_progress = 0.27614486
 
 [node name="hourglass" type="AnimatedSprite2D" parent="."]
 position = Vector2(484, 229)
@@ -852,7 +852,8 @@ visible = false
 scale = Vector2(1.2064815, 1.2064815)
 sprite_frames = SubResource("SpriteFrames_7uj61")
 animation = &"dance"
-speed_scale = 7.0
+frame_progress = 0.29662898
+speed_scale = 8.0
 centered = false
 
 [node name="hand2" type="Sprite2D" parent="."]
