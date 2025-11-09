@@ -65,10 +65,12 @@ func _process(delta):
 func _on_item_area_enter(area):
 	var area_parent = area.get_parent()
 	if area_parent.has_method('disolve'):
+		$LeftHand/holdLabel.visible = true
 		closest_item_to_pick_up = area.get_parent()
 
 func _on_item_area_exit(area):
 	if area.get_parent() == closest_item_to_pick_up:
+		$LeftHand/holdLabel.visible = false
 		closest_item_to_pick_up = null
 
 func _on_soup_area_enter(a,b,c,d):

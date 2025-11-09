@@ -33,7 +33,7 @@ func generate_pages_items():
 	pages_items.shuffle()
 	
 func finish_game():
-	pass
+	get_tree().change_scene_to_file("res://end.tscn")
 
 func start_game():
 	%Table.spawn_items(game_ingredients[current_index])

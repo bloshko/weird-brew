@@ -41,7 +41,7 @@
 [ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://0a5nn7wisv06" path="res://assets/water0.png" id="32_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://dyk3gmfj2cpql" path="res://assets/spoon1.png" id="34_h8e4i"]
-[ext_resource type="Script" path="res://lozka_visuals.gd" id="35_0cp0l"]
+[ext_resource type="Script" uid="uid://v3dcc6jtgbpa" path="res://lozka_visuals.gd" id="35_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
 [ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
@@ -170,7 +170,7 @@ animations = [{
 [sub_resource type="QuadMesh" id="QuadMesh_ywuup"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3s46"]
-radius = 93.193344
+radius = 76.78191
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0n3wm"]
 
@@ -253,6 +253,7 @@ gizmo_extents = 42.1
 position = Vector2(923, 909)
 
 [node name="LeftHand" type="Node2D" parent="PrototypeLeftHandMovements"]
+position = Vector2(10, 58)
 
 [node name="OpenHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
 position = Vector2(669.294, 1737.5706)
@@ -275,24 +276,44 @@ collision_layer = 2
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeLeftHandMovements/LeftHand/AreaToPickUpThings"]
+position = Vector2(10, -11)
 scale = Vector2(1.4982585, 1.4982585)
 shape = SubResource("CircleShape2D_f3s46")
 
+[node name="holdLabel" type="Label" parent="PrototypeLeftHandMovements/LeftHand"]
+visible = false
+offset_left = 528.0
+offset_top = 927.0
+offset_right = 939.0
+offset_bottom = 1018.0
+theme_override_font_sizes/font_size = 31
+text = "hold [space]
+to grab"
+
 [node name="nextPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
-offset_left = 1026.0
-offset_top = 311.0
-offset_right = 1189.0
-offset_bottom = 468.0
-theme_override_font_sizes/font_size = 56
+offset_left = 1033.0
+offset_top = 319.0
+offset_right = 1196.0
+offset_bottom = 476.0
+theme_override_font_sizes/font_size = 36
 text = "[E]
 page>"
 
-[node name="previousPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
-offset_left = 83.0
-offset_top = 472.0
-offset_right = 269.0
-offset_bottom = 629.0
+[node name="wasdLabel" type="Label" parent="PrototypeLeftHandMovements"]
+offset_left = 36.0
+offset_top = 1101.0
+offset_right = 390.0
+offset_bottom = 1258.0
 theme_override_font_sizes/font_size = 56
+text = "     [W]
+[A] [S] [D]"
+
+[node name="previousPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
+offset_left = 137.0
+offset_top = 457.0
+offset_right = 323.0
+offset_bottom = 614.0
+theme_override_font_sizes/font_size = 36
 text = "       [Q]
 < page"
 
