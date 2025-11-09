@@ -11,7 +11,16 @@ const ASSETS  = [
 	{"A_tex": "res://assets/ingridients/adam_a.png", "B_tex": "res://assets/ingridients/adam_b.png",
 	"A_mp3": "", "B_mp3": ""},
 	{"A_tex": "res://assets/ingridients/skull_a.png","B_tex": "res://assets/ingridients/skull_b.png","A_mp3": "", "B_mp3": ""},
-	{"A_tex": "res://assets/ingridients/spice_a.png", "B_tex": "res://assets/ingridients/spice_b.png","A_mp3": "", "B_mp3": ""}
+	{"A_tex": "res://assets/ingridients/spice_a.png", "B_tex": "res://assets/ingridients/spice_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/cow_a.png", "B_tex": "res://assets/ingridients/cow_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/mushroom_a.png", "B_tex": "res://assets/ingridients/mushroom_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/nut_a.png", "B_tex": "res://assets/ingridients/nut_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/olives_a.png", "B_tex": "res://assets/ingridients/olives_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/pin_a.png", "B_tex": "res://assets/ingridients/pin_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/sock_a.png", "B_tex": "res://assets/ingridients/sock_b.png","A_mp3": "", "B_mp3": ""},
+{"A_tex": "res://assets/ingridients/tomato_a.png", "B_tex": "res://assets/ingridients/tomato_b.png","A_mp3": "", "B_mp3": ""},
+
+
 ]
 
 class Ingredient:

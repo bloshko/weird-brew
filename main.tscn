@@ -223,11 +223,11 @@ texture = ExtResource("7_0n3wm")
 
 [node name="LeftImage" type="Sprite2D" parent="Book/Images"]
 position = Vector2(451, 552)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.45, 0.45)
 
 [node name="RightImage" type="Sprite2D" parent="Book/Images"]
 position = Vector2(826, 501)
-scale = Vector2(0.3, 0.3)
+scale = Vector2(0.45, 0.45)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1480, 1166)
