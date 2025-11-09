@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chjwo62yqoxrp"
-path="res://.godot/imported/adam_b.jpeg-27bc97dc0476135fdad3287425e4c1f2.ctex"
+uid="uid://binoytn2q3emd"
+path="res://.godot/imported/spice_b.png-c4aba36025c1e36c46de0d41fa81fb0b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ingridients/adam_b.jpeg"
-dest_files=["res://.godot/imported/adam_b.jpeg-27bc97dc0476135fdad3287425e4c1f2.ctex"]
+source_file="res://assets/ingridients/spice_b.png"
+dest_files=["res://.godot/imported/spice_b.png-c4aba36025c1e36c46de0d41fa81fb0b.ctex"]
 
 [params]
 

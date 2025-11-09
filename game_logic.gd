@@ -6,10 +6,10 @@ var selected_mp3: Array[String] = []
 var pages_items = []
 
 const ASSETS  = [
-	{"A_tex": "res://assets/ingridients/adam_a.jpeg", "B_tex": "res://assets/ingridients/adam_b.jpeg",
+	{"A_tex": "res://assets/ingridients/adam_a.png", "B_tex": "res://assets/ingridients/adam_b.png",
 	"A_mp3": "", "B_mp3": ""},
-	{"A_tex": "res://assets/ingridients/skull_a.jpeg","B_tex": "res://assets/ingridients/skull_b.jpeg","A_mp3": "", "B_mp3": ""},
-	{"A_tex": "res://assets/ingridients/spice_a.jpeg", "B_tex": "res://assets/ingridients/spice_b.jpeg","A_mp3": "", "B_mp3": ""}
+	{"A_tex": "res://assets/ingridients/skull_a.png","B_tex": "res://assets/ingridients/skull_b.png","A_mp3": "", "B_mp3": ""},
+	{"A_tex": "res://assets/ingridients/spice_a.png", "B_tex": "res://assets/ingridients/spice_b.png","A_mp3": "", "B_mp3": ""}
 ]
 
 class Ingredient:

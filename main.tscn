@@ -40,7 +40,7 @@
 [ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://0a5nn7wisv06" path="res://assets/water0.png" id="32_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://dyk3gmfj2cpql" path="res://assets/spoon1.png" id="34_h8e4i"]
-[ext_resource type="Script" path="res://lozka_visuals.gd" id="35_0cp0l"]
+[ext_resource type="Script" uid="uid://v3dcc6jtgbpa" path="res://lozka_visuals.gd" id="35_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
 [ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
