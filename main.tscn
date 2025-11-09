@@ -239,6 +239,17 @@ speed_scale = 0.2
 [node name="PrototypeLeftHandMovements" type="Node2D" parent="."]
 script = ExtResource("26_htxhm")
 
+[node name="Table" type="Node2D" parent="PrototypeLeftHandMovements"]
+unique_name_in_owner = true
+script = ExtResource("27_jq2sk")
+
+[node name="LeftItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(432, 952)
+gizmo_extents = 42.1
+
+[node name="RightItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(923, 909)
+
 [node name="LeftHand" type="Node2D" parent="PrototypeLeftHandMovements"]
 
 [node name="OpenHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
@@ -257,22 +268,13 @@ mesh = SubResource("QuadMesh_ywuup")
 texture = ExtResource("29_0rl1p")
 
 [node name="AreaToPickUpThings" type="Area2D" parent="PrototypeLeftHandMovements/LeftHand"]
+position = Vector2(677, 1143)
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeLeftHandMovements/LeftHand/AreaToPickUpThings"]
-position = Vector2(682.9642, 1147)
 scale = Vector2(1.4982585, 1.4982585)
 shape = SubResource("CircleShape2D_f3s46")
-
-[node name="Table" type="Node2D" parent="PrototypeLeftHandMovements"]
-unique_name_in_owner = true
-script = ExtResource("27_jq2sk")
-
-[node name="LeftItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
-position = Vector2(432, 952)
-gizmo_extents = 42.1
-
-[node name="RightItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
-position = Vector2(923, 909)
 
 [node name="nextPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
 offset_left = 1014.0

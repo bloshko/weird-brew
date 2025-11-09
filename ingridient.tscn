@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://bncisrjfndtj"]
+[gd_scene load_steps=3 format=3 uid="uid://bncisrjfndtj"]
 
 [ext_resource type="Script" uid="uid://u5fqbesocl77" path="res://ingridient.gd" id="1_a5jgv"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_a5jgv"]
+
 [node name="Ingridient" type="Sprite2D"]
 script = ExtResource("1_a5jgv")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.498, 1.498)
+shape = SubResource("CircleShape2D_a5jgv")
