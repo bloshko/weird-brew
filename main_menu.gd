@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$Area2D.connect("stove_turned_on", Callable(self, "_on_stove_turned_on"))
 	$background.play("off")
 	$water.play("water_still")

@@ -34,13 +34,13 @@
 [ext_resource type="Texture2D" uid="uid://cdmcna4qbmqf2" path="res://assets/hand_right.png" id="25_seu75"]
 [ext_resource type="Texture2D" uid="uid://wdkppe1kkrlk" path="res://assets/water3.png" id="26_0rl1p"]
 [ext_resource type="Script" uid="uid://dq173kyf355g1" path="res://prototype_left_hand_movements.gd" id="26_htxhm"]
-[ext_resource type="Script" path="res://table.gd" id="27_jq2sk"]
+[ext_resource type="Script" uid="uid://x8ro4wm5lkkb" path="res://table.gd" id="27_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://ct3ivf6iwex5j" path="res://assets/hand_left.png" id="28_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://bwoomyx3b4nvm" path="res://assets/hand_left_hold.png" id="29_0rl1p"]
-[ext_resource type="Script" path="res://game_logic.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://0a5nn7wisv06" path="res://assets/water0.png" id="32_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://dyk3gmfj2cpql" path="res://assets/spoon1.png" id="34_h8e4i"]
-[ext_resource type="Script" uid="uid://v3dcc6jtgbpa" path="res://lozka_visuals.gd" id="35_0cp0l"]
+[ext_resource type="Script" path="res://lozka_visuals.gd" id="35_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
 [ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
@@ -198,6 +198,10 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_htxhm")
 
+[node name="GameLogic" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("30_kq58d")
+
 [node name="background" type="AnimatedSprite2D" parent="."]
 scale = Vector2(1.2, 1.2)
 sprite_frames = SubResource("SpriteFrames_0cp0l")
@@ -263,10 +267,11 @@ shape = SubResource("CircleShape2D_f3s46")
 unique_name_in_owner = true
 script = ExtResource("27_jq2sk")
 
-[node name="LeftItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
-position = Vector2(425, 943)
+[node name="LeftItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(432, 952)
+gizmo_extents = 42.1
 
-[node name="RightItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
+[node name="RightItemSpawn" type="Marker2D" parent="PrototypeLeftHandMovements/Table"]
 position = Vector2(923, 909)
 
 [node name="nextPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
@@ -389,6 +394,3 @@ sprite_frames = SubResource("SpriteFrames_d2t1y")
 animation = &"smoke"
 frame_progress = 0.33894357
 centered = false
-
-[node name="GameLogic" type="Node" parent="."]
-script = ExtResource("30_kq58d")
