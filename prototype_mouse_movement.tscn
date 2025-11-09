@@ -104,7 +104,7 @@ wait_time = 2.0
 
 [node name="Lozka" type="MeshInstance2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1311.7693, 578.9614)
+position = Vector2(1989.9999, 1003)
 scale = Vector2(31.538282, 31.538282)
 mesh = SubResource("QuadMesh_pwf5s")
 texture = SubResource("ImageTexture_74uov")

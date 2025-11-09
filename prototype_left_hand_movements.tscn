@@ -15,7 +15,7 @@ script = ExtResource("1_f3s46")
 [node name="LeftHand" type="Node2D" parent="."]
 
 [node name="OpenHand" type="MeshInstance2D" parent="LeftHand"]
-position = Vector2(503.29413, 1092.5706)
+position = Vector2(282.294, 1677.5706)
 rotation = -1.5707964
 scale = Vector2(1559.1412, -320.58798)
 mesh = SubResource("QuadMesh_ywuup")
@@ -32,6 +32,6 @@ texture = ExtResource("3_pd4h1")
 [node name="AreaToPickUpThings" type="Area2D" parent="LeftHand"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LeftHand/AreaToPickUpThings"]
-position = Vector2(516.9643, 501.99997)
+position = Vector2(295.96417, 1087)
 scale = Vector2(1.4982585, 1.4982585)
 shape = SubResource("CircleShape2D_f3s46")

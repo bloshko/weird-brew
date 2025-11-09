@@ -1,8 +1,13 @@
-[gd_scene load_steps=40 format=3 uid="uid://dkm812ayphilu"]
+[gd_scene load_steps=54 format=3 uid="uid://dkm812ayphilu"]
 
 [ext_resource type="Texture2D" uid="uid://dmi2du444iub4" path="res://assets/bg1.png" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://67acndj6ot65" path="res://animations_start.gd" id="1_htxhm"]
+[ext_resource type="Texture2D" uid="uid://cyinfvtitkbw1" path="res://assets/bg0.png" id="2_come4"]
 [ext_resource type="Texture2D" uid="uid://c54hpcrgxa3d8" path="res://assets/hourglass/glsass0.png" id="4_1u8w0"]
+[ext_resource type="Texture2D" uid="uid://x16cua284x6b" path="res://assets/bg2.png" id="4_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://capbq4ppkx6c6" path="res://assets/hourglass/glsass1.png" id="5_0odxb"]
+[ext_resource type="Texture2D" uid="uid://dagoo4jmq2dtn" path="res://assets/bg3.png" id="5_4lmeg"]
+[ext_resource type="Texture2D" uid="uid://de5wchi42m0pl" path="res://assets/knob1.png" id="6_come4"]
 [ext_resource type="Texture2D" uid="uid://rnxj38vr68t7" path="res://assets/hourglass/glsass2.png" id="6_lswn8"]
 [ext_resource type="Texture2D" uid="uid://bmkrfm5wueplf" path="res://assets/hourglass/glsass3.png" id="7_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://cudpxhruum6l8" path="res://assets/hourglass/glsass4.png" id="8_xuqvo"]
@@ -23,17 +28,51 @@
 [ext_resource type="Texture2D" uid="uid://sw5md3hjbjpq" path="res://assets/hourglass/glsass19.png" id="23_d2t1y"]
 [ext_resource type="Script" uid="uid://dwka8hvmmfnpg" path="res://prototype_mouse_movement.gd" id="23_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://bogbup3bkenbr" path="res://assets/hourglass/glsass20.png" id="24_gngh3"]
+[ext_resource type="Texture2D" uid="uid://ls6rwflhnwka" path="res://assets/water1.png" id="24_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://ddmrmko4xi7t0" path="res://assets/circle_empty.png" id="24_kq58d"]
+[ext_resource type="Texture2D" uid="uid://yn5ojgp6es1r" path="res://assets/water2.png" id="25_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://cdmcna4qbmqf2" path="res://assets/hand_right.png" id="25_seu75"]
+[ext_resource type="Texture2D" uid="uid://wdkppe1kkrlk" path="res://assets/water3.png" id="26_0rl1p"]
 [ext_resource type="Script" uid="uid://dq173kyf355g1" path="res://prototype_left_hand_movements.gd" id="26_htxhm"]
-[ext_resource type="Script" uid="uid://x8ro4wm5lkkb" path="res://table.gd" id="27_jq2sk"]
+[ext_resource type="Script" path="res://table.gd" id="27_jq2sk"]
 [ext_resource type="Texture2D" uid="uid://ct3ivf6iwex5j" path="res://assets/hand_left.png" id="28_4k2k6"]
 [ext_resource type="Texture2D" uid="uid://bwoomyx3b4nvm" path="res://assets/hand_left_hold.png" id="29_0rl1p"]
-[ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
+[ext_resource type="Script" path="res://game_logic.gd" id="30_kq58d"]
+[ext_resource type="Texture2D" uid="uid://0a5nn7wisv06" path="res://assets/water0.png" id="32_h8e4i"]
+[ext_resource type="Texture2D" uid="uid://dyk3gmfj2cpql" path="res://assets/spoon1.png" id="34_h8e4i"]
+[ext_resource type="Script" uid="uid://v3dcc6jtgbpa" path="res://lozka_visuals.gd" id="35_0cp0l"]
+[ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
+[ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
+[ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
+[ext_resource type="Texture2D" uid="uid://bl83j83jjdjao" path="res://assets/notebook0.png" id="41_4lmeg"]
 
-[sub_resource type="PlaceholderMesh" id="PlaceholderMesh_7dm0k"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_0cp0l"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_come4")
+}],
+"loop": true,
+"name": &"off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_h2yge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h8e4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4lmeg")
+}],
+"loop": true,
+"name": &"on",
+"speed": 5.0
+}]
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_ig7tw"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_ok6jj"]
+radius = 77.92946
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0n3wm"]
 animations = [{
@@ -102,56 +141,177 @@ animations = [{
 "texture": ExtResource("24_gngh3")
 }],
 "loop": true,
-"name": &"default",
+"name": &"hourglass",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_jq2sk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4k2k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_0rl1p")
+}],
+"loop": true,
+"name": &"water_boil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_h8e4i")
+}],
+"loop": true,
+"name": &"water_still",
 "speed": 5.0
 }]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2gp"]
-size = Vector2(69.99994, 69)
-
-[sub_resource type="QuadMesh" id="QuadMesh_pwf5s"]
-
-[sub_resource type="ImageTexture" id="ImageTexture_74uov"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xlq"]
-size = Vector2(1.5164642, 1.562959)
 
 [sub_resource type="QuadMesh" id="QuadMesh_ywuup"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_f3s46"]
 radius = 93.193344
 
-[node name="Node2D" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d2xlq"]
+size = Vector2(1.1582584, 1.0076624)
 
-[node name="background" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("1_h2yge")
-expand_mode = 1
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sl2gp"]
+size = Vector2(69.99994, 69)
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource("PlaceholderMesh_7dm0k")
-texture = SubResource("NoiseTexture2D_ig7tw")
+[sub_resource type="SpriteFrames" id="SpriteFrames_d2t1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_0n3wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_qnost")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_wnkbs")
+}],
+"loop": true,
+"name": &"smoke",
+"speed": 5.0
+}]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_htxhm")
+
+[node name="background" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.2, 1.2)
+sprite_frames = SubResource("SpriteFrames_0cp0l")
+animation = &"off"
+centered = false
+
+[node name="notebook" type="Sprite2D" parent="."]
+position = Vector2(664, 556)
+scale = Vector2(1.225, 1.225)
+texture = ExtResource("41_4lmeg")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(1480, 1166)
+
+[node name="knob" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("6_come4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(3, -6)
+shape = SubResource("CircleShape2D_ok6jj")
+
+[node name="water" type="AnimatedSprite2D" parent="."]
+position = Vector2(1755.0001, 409)
+scale = Vector2(1.186, 1.186)
+sprite_frames = SubResource("SpriteFrames_0n3wm")
+animation = &"water_still"
+
+[node name="hourglass" type="AnimatedSprite2D" parent="."]
 position = Vector2(484, 229)
 scale = Vector2(0.6499007, 0.6499007)
 sprite_frames = SubResource("SpriteFrames_0n3wm")
-frame_progress = 0.54752904
+animation = &"hourglass"
 speed_scale = 0.2
+
+[node name="PrototypeLeftHandMovements" type="Node2D" parent="."]
+script = ExtResource("26_htxhm")
+
+[node name="LeftHand" type="Node2D" parent="PrototypeLeftHandMovements"]
+
+[node name="OpenHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
+position = Vector2(669.294, 1737.5706)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58798)
+mesh = SubResource("QuadMesh_ywuup")
+texture = ExtResource("28_4k2k6")
+
+[node name="ClosedHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
+visible = false
+position = Vector2(669.294, 1737.571)
+rotation = -1.5707964
+scale = Vector2(1559.1412, -320.58817)
+mesh = SubResource("QuadMesh_ywuup")
+texture = ExtResource("29_0rl1p")
+
+[node name="AreaToPickUpThings" type="Area2D" parent="PrototypeLeftHandMovements/LeftHand"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeLeftHandMovements/LeftHand/AreaToPickUpThings"]
+position = Vector2(682.9642, 1147)
+scale = Vector2(1.4982585, 1.4982585)
+shape = SubResource("CircleShape2D_f3s46")
+
+[node name="Table" type="Node2D" parent="PrototypeLeftHandMovements"]
+unique_name_in_owner = true
+script = ExtResource("27_jq2sk")
+
+[node name="LeftItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(425, 943)
+
+[node name="RightItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
+position = Vector2(923, 909)
+
+[node name="nextPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
+offset_left = 1014.0
+offset_top = 322.0
+offset_right = 1095.0
+offset_bottom = 399.0
+theme_override_font_sizes/font_size = 56
+text = "[E]
+page>"
+
+[node name="previousPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
+offset_left = 83.0
+offset_top = 472.0
+offset_right = 269.0
+offset_bottom = 629.0
+theme_override_font_sizes/font_size = 56
+text = "       [Q]
+< page"
 
 [node name="PrototypeMouseMovement" type="Node2D" parent="."]
 script = ExtResource("23_qsp4k")
+
+[node name="Lozka" type="Area2D" parent="PrototypeMouseMovement"]
+unique_name_in_owner = true
+position = Vector2(2588, 979)
+scale = Vector2(37.608288, 37.608288)
+script = ExtResource("35_0cp0l")
+
+[node name="spoon" type="Sprite2D" parent="PrototypeMouseMovement/Lozka"]
+position = Vector2(-1.9144702, -1.5156231)
+rotation = -3.124648
+scale = Vector2(-0.03, -0.03)
+texture = ExtResource("34_h8e4i")
+
+[node name="hand" type="Sprite2D" parent="PrototypeMouseMovement/Lozka"]
+position = Vector2(1.8780568, 16.74278)
+rotation = -1.562324
+scale = Vector2(0.037171256, 0.037171256)
+texture = ExtResource("25_seu75")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Lozka"]
+position = Vector2(-4.1538696, -6.3549824)
+scale = Vector2(1.0000006, 1.0000006)
+shape = SubResource("RectangleShape2D_d2xlq")
 
 [node name="Map" type="Node2D" parent="PrototypeMouseMovement"]
 
@@ -221,64 +381,14 @@ texture = ExtResource("24_kq58d")
 shape = SubResource("RectangleShape2D_sl2gp")
 
 [node name="MapNodeNodeTouchedTimer" type="Timer" parent="PrototypeMouseMovement/Map"]
-wait_time = 2.0
 
-[node name="Lozka" type="MeshInstance2D" parent="PrototypeMouseMovement"]
-unique_name_in_owner = true
-position = Vector2(1311.7693, 578.9614)
-scale = Vector2(31.538282, 31.538282)
-mesh = SubResource("QuadMesh_pwf5s")
-texture = SubResource("ImageTexture_74uov")
-
-[node name="Area2D" type="Area2D" parent="PrototypeMouseMovement/Lozka"]
-
-[node name="Sprite2D" type="Sprite2D" parent="PrototypeMouseMovement/Lozka/Area2D"]
-position = Vector2(1.8780568, 16.74278)
-rotation = -1.562324
-scale = Vector2(0.037171256, 0.037171256)
-texture = ExtResource("25_seu75")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeMouseMovement/Lozka/Area2D"]
-position = Vector2(0.007315159, -0.25243643)
-scale = Vector2(1.0000006, 1.0000006)
-shape = SubResource("RectangleShape2D_d2xlq")
-
-[node name="PrototypeLeftHandMovements" type="Node2D" parent="."]
-script = ExtResource("26_htxhm")
-
-[node name="LeftHand" type="Node2D" parent="PrototypeLeftHandMovements"]
-
-[node name="OpenHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
-position = Vector2(503.29413, 1092.5706)
-rotation = -1.5707964
-scale = Vector2(1559.1412, -320.58798)
-mesh = SubResource("QuadMesh_ywuup")
-texture = ExtResource("28_4k2k6")
-
-[node name="ClosedHand" type="MeshInstance2D" parent="PrototypeLeftHandMovements/LeftHand"]
+[node name="smoke" type="AnimatedSprite2D" parent="PrototypeMouseMovement"]
 visible = false
-position = Vector2(502.2941, 1090.5706)
-rotation = -1.5707964
-scale = Vector2(1559.1412, -320.58817)
-mesh = SubResource("QuadMesh_ywuup")
-texture = ExtResource("29_0rl1p")
-
-[node name="AreaToPickUpThings" type="Area2D" parent="PrototypeLeftHandMovements/LeftHand"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PrototypeLeftHandMovements/LeftHand/AreaToPickUpThings"]
-position = Vector2(516.9643, 501.99997)
-scale = Vector2(1.4982585, 1.4982585)
-shape = SubResource("CircleShape2D_f3s46")
-
-[node name="Table" type="Node2D" parent="PrototypeLeftHandMovements"]
-unique_name_in_owner = true
-script = ExtResource("27_jq2sk")
-
-[node name="LeftItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
-position = Vector2(425, 943)
-
-[node name="RightItemSpawn" type="Node2D" parent="PrototypeLeftHandMovements/Table"]
-position = Vector2(923, 909)
+scale = Vector2(1.205, 1.205)
+sprite_frames = SubResource("SpriteFrames_d2t1y")
+animation = &"smoke"
+frame_progress = 0.33894357
+centered = false
 
 [node name="GameLogic" type="Node" parent="."]
 script = ExtResource("30_kq58d")
