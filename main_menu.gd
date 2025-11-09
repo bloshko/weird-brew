@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var a = preload("res://end.tscn")
+
 func _ready():
 	#Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 	$Area2D.connect("stove_turned_on", Callable(self, "_on_stove_turned_on"))

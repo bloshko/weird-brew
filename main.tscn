@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://dkm812ayphilu"]
+[gd_scene load_steps=56 format=3 uid="uid://dkm812ayphilu"]
 
 [ext_resource type="Texture2D" uid="uid://dmi2du444iub4" path="res://assets/bg1.png" id="1_h2yge"]
 [ext_resource type="Script" uid="uid://67acndj6ot65" path="res://animations_start.gd" id="1_htxhm"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://rnxj38vr68t7" path="res://assets/hourglass/glsass2.png" id="6_lswn8"]
 [ext_resource type="Texture2D" uid="uid://buoekdmjye372" path="res://assets/notebook_opened.png" id="7_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://bmkrfm5wueplf" path="res://assets/hourglass/glsass3.png" id="7_a6jrf"]
+[ext_resource type="Script" uid="uid://di6omfrjasjpn" path="res://book.gd" id="7_qnost"]
 [ext_resource type="Texture2D" uid="uid://cudpxhruum6l8" path="res://assets/hourglass/glsass4.png" id="8_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://dujcaqixq0ubn" path="res://assets/hourglass/glsass5.png" id="9_qsp4k"]
 [ext_resource type="Texture2D" uid="uid://bdc6ovltxqna4" path="res://assets/hourglass/glsass6.png" id="10_kq58d"]
@@ -41,7 +42,7 @@
 [ext_resource type="Script" uid="uid://bbyb7nkp4d43d" path="res://game_logic.gd" id="30_kq58d"]
 [ext_resource type="Texture2D" uid="uid://0a5nn7wisv06" path="res://assets/water0.png" id="32_h8e4i"]
 [ext_resource type="Texture2D" uid="uid://dyk3gmfj2cpql" path="res://assets/spoon1.png" id="34_h8e4i"]
-[ext_resource type="Script" uid="uid://v3dcc6jtgbpa" path="res://lozka_visuals.gd" id="35_0cp0l"]
+[ext_resource type="Script" path="res://lozka_visuals.gd" id="35_0cp0l"]
 [ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
 [ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
@@ -210,10 +211,23 @@ sprite_frames = SubResource("SpriteFrames_0cp0l")
 animation = &"off"
 centered = false
 
-[node name="notebook" type="Sprite2D" parent="."]
+[node name="Book" type="Node2D" parent="."]
+script = ExtResource("7_qnost")
+
+[node name="notebook" type="Sprite2D" parent="Book"]
 position = Vector2(664, 556)
 scale = Vector2(1.225, 1.225)
 texture = ExtResource("7_0n3wm")
+
+[node name="Images" type="Node2D" parent="Book"]
+
+[node name="LeftImage" type="Sprite2D" parent="Book/Images"]
+position = Vector2(451, 552)
+scale = Vector2(0.3, 0.3)
+
+[node name="RightImage" type="Sprite2D" parent="Book/Images"]
+position = Vector2(826, 501)
+scale = Vector2(0.3, 0.3)
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1480, 1166)
