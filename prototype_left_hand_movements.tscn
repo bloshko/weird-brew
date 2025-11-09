@@ -1,6 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba0wfdxpewfpl"]
+[gd_scene load_steps=6 format=3 uid="uid://bnf0b8wmr38qb"]
 
-[ext_resource type="Script" path="res://prototype_left_hand_movements.gd" id="1_f3s46"]
+[ext_resource type="Script" uid="uid://dq173kyf355g1" path="res://prototype_left_hand_movements.gd" id="1_f3s46"]
 [ext_resource type="Texture2D" uid="uid://ct3ivf6iwex5j" path="res://assets/hand_left.png" id="2_u4iia"]
 [ext_resource type="Texture2D" uid="uid://bwoomyx3b4nvm" path="res://assets/hand_left_hold.png" id="3_pd4h1"]
 

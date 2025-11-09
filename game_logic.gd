@@ -3,6 +3,7 @@ extends Node
 var game_ingredients: Array[Ingredient] = []
 var selected_mp3: Array[String] = []
 
+var current_index = 0
 var pages_items = []
 
 const ASSETS  = [
@@ -30,6 +31,24 @@ func generate_pages_items():
 		pages_items.append(i.correct_item_tex)
 		
 	pages_items.shuffle()
+	
+func finish_game():
+	pass
+
+func start_game():
+	%Table.spawn_items(game_ingredients[current_index])
+	
+func add_mp3(mp3_res):
+	selected_mp3.append(mp3_res)
+	%Table.destroy_items()
+	current_index += 1
+	
+	if current_index >= game_ingredients.size():
+		finish_game()
+		return
+	
+	%Table.spawn_items(game_ingredients[current_index])	
+	
 
 func generate_ingredients():
 	for ingredient in ASSETS:
