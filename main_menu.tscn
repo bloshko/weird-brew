@@ -214,6 +214,7 @@ scale = Vector2(1.23, 1.23)
 texture = ExtResource("33_swr0i")
 
 [node name="overlay" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, 0)
 scale = Vector2(1.205, 1.205)
 sprite_frames = SubResource("SpriteFrames_swr0i")
 animation = &"blinking"

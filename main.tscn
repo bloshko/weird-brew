@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dagoo4jmq2dtn" path="res://assets/bg3.png" id="5_4lmeg"]
 [ext_resource type="Texture2D" uid="uid://de5wchi42m0pl" path="res://assets/knob1.png" id="6_come4"]
 [ext_resource type="Texture2D" uid="uid://rnxj38vr68t7" path="res://assets/hourglass/glsass2.png" id="6_lswn8"]
+[ext_resource type="Texture2D" uid="uid://buoekdmjye372" path="res://assets/notebook_opened.png" id="7_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://bmkrfm5wueplf" path="res://assets/hourglass/glsass3.png" id="7_a6jrf"]
 [ext_resource type="Texture2D" uid="uid://cudpxhruum6l8" path="res://assets/hourglass/glsass4.png" id="8_xuqvo"]
 [ext_resource type="Texture2D" uid="uid://dujcaqixq0ubn" path="res://assets/hourglass/glsass5.png" id="9_qsp4k"]
@@ -44,7 +45,6 @@
 [ext_resource type="Texture2D" uid="uid://e56vipaako44" path="res://assets/smoke1.png" id="38_0n3wm"]
 [ext_resource type="Texture2D" uid="uid://dx8n07o7kvxgy" path="res://assets/smoke2.png" id="39_qnost"]
 [ext_resource type="Texture2D" uid="uid://cvftp6sdsaypa" path="res://assets/smoke3.png" id="40_wnkbs"]
-[ext_resource type="Texture2D" uid="uid://bl83j83jjdjao" path="res://assets/notebook0.png" id="41_4lmeg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0cp0l"]
 animations = [{
@@ -211,7 +211,7 @@ centered = false
 [node name="notebook" type="Sprite2D" parent="."]
 position = Vector2(664, 556)
 scale = Vector2(1.225, 1.225)
-texture = ExtResource("41_4lmeg")
+texture = ExtResource("7_0n3wm")
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(1480, 1166)
@@ -277,10 +277,10 @@ scale = Vector2(1.4982585, 1.4982585)
 shape = SubResource("CircleShape2D_f3s46")
 
 [node name="nextPageLabel" type="Label" parent="PrototypeLeftHandMovements"]
-offset_left = 1014.0
-offset_top = 322.0
-offset_right = 1095.0
-offset_bottom = 399.0
+offset_left = 1026.0
+offset_top = 311.0
+offset_right = 1189.0
+offset_bottom = 468.0
 theme_override_font_sizes/font_size = 56
 text = "[E]
 page>"
